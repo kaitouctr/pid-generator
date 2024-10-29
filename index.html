@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PID Generator</h1>
+    <main>
+        <form id="params">
+            <label for="tidEntry">TID:</label>
+            <input id="tidEntry" type="number" min="0" max="65535" />
+            <label for="sidEntry">SID:</label>
+            <input id="sidEntry" type="number" min="0" max="65535" />
+            <label for="searchShinyEntry">Shiny:</label>
+            <select id="searchShinyEntry">
+                <option value="any">Any</option>
+                <option value="non-shiny">Non-Shiny</option>
+                <option value="square">Square</option>
+                <option value="star">Star</option>
+                <option value="all-shiny">Star/Square</option>
+            </select>
+            <label for="natureEntry">Nature:</label>
+            <select id="natureEntry">
+                <option value="">–</option>
+                <option>Hardy</option>
+                <option>Lonely</option>
+                <option>Brave</option>
+                <option>Adamant</option>
+                <option>Naughty</option>
+                <option>Bold</option>
+                <option>Docile</option>
+                <option>Relaxed</option>
+                <option>Impish</option>
+                <option>Lax</option>
+                <option>Timid</option>
+                <option>Hasty</option>
+                <option>Serious</option>
+                <option>Jolly</option>
+                <option>Naive</option>
+                <option>Modest</option>
+                <option>Mild</option>
+                <option>Quiet</option>
+                <option>Bashful</option>
+                <option>Rash</option>
+                <option>Calm</option>
+                <option>Gentle</option>
+                <option>Sassy</option>
+                <option>Careful</option>
+                <option>Quirky</option>
+            </select>
+            <label for="abilityEntry">Ability:</label>
+            <select id="abilityEntry">
+                <option value="">–</option>
+                <option>0</option>
+                <option>1</option>
+            </select>
+            <label for="genderEntry">Gender: </label>
+            <select id="genderEntry">
+                <option value="gender_unknown">Gender unknown</option>
+                <option value="male">♂</option>
+                <option value="female">♀</option>
+            </select>
+            <label for="genderRatioEntry">Gender Ratio: </label>
+            <select id="genderRatioEntry" disabled>
+                <option value="gender_unknown" selected hidden>–</option>
+                <option value="male_to_female_7_1">87.5% ♂: 12.5% ♀</option>
+                <option value="male_to_female_3_1">75% ♂: 25% ♀</option>
+                <option value="male_to_female_1_1">50% ♂: 50% ♀</option>
+                <option value="male_to_female_1_3">25% ♂: 75% ♀</option>
+                <option value="male_to_female_1_7">12.5% ♂: 87.5% ♀</option>
+                <option value="male" hidden>100% ♂</option>
+                <option value="female" hidden>100% ♀</option>
+            </select>
+            <button type="button" id="submitParamsButton">Find PID</button>
+        </form>
+        <section id="results">
+            <h2>Results</h2>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PID</td>
+                        <td id="pidInsert"></td>
+                    </tr>
+                    <tr>
+                        <td>TID</td>
+                        <td id="tidInsert"></td>
+                    </tr>
+                    <tr>
+                        <td>SID</td>
+                        <td id="sidInsert"></td>
+                    </tr>
+                    <tr>
+                        <td>Nature</td>
+                        <td id="natureInsert"></td>
+                    </tr>
+                    <tr>
+                        <td>Ability</td>
+                        <td id="abilityInsert"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td id="genderInsert"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
