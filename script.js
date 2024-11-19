@@ -240,7 +240,7 @@ document.getElementById('params').addEventListener('submit', function () {
   }
   const nature = data.get('nature') || null;
   const ability =
-    data.get('ability') !== '' ? Number(data.get('ability')) : null;
+    (data.get('ability') !== '') ? Number(data.get('ability')) : null;
   const pid = searchForPID(
     tid,
     sid,
