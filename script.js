@@ -239,7 +239,8 @@ document.getElementById('params').addEventListener('submit', function () {
     return;
   }
   const nature = data.get('nature') || null;
-  const ability = data.get('ability') || null;
+  const ability =
+    data.get('ability') !== undefined ? Number(data.get('ability')) : null;
   const pid = searchForPID(
     tid,
     sid,
