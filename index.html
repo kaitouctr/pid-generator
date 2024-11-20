@@ -30,9 +30,25 @@
       <h1>PID Generator</h1>
       <form id="params" name="pidGenerator">
         <label for="tidEntry">TID:</label>
-        <input name="tid" id="tidEntry" type="number" min="0" max="65535" value="0" required />
+        <input
+          name="tid"
+          id="tidEntry"
+          type="number"
+          min="0"
+          max="65535"
+          value="0"
+          required
+        />
         <label for="sidEntry">SID:</label>
-        <input name="sid" id="sidEntry" type="number" min="0" max="65535" value="0" required />
+        <input
+          name="sid"
+          id="sidEntry"
+          type="number"
+          min="0"
+          max="65535"
+          value="0"
+          required
+        />
         <label for="searchShinyEntry">Shiny:</label>
         <select name="shiny" id="searchShinyEntry">
           <option value="any">Any</option>
@@ -103,6 +119,15 @@
         <label>Gender:</label>
         <output name="pidGender" id="genderInsert"></output>
       </form>
+      <p>
+        <a href="https://github.com/kaitouctr/pid-generator">Source Code</a
+        ><br />
+        This web application is licensed under the terms of the MIT License,
+        <a
+          href="https://github.com/kaitouctr/pid-generator/blob/main/LICENSE"
+          >read more here</a
+        >
+      </p>
     </main>
     <script src="script.js"></script>
   </body>
